@@ -12,6 +12,7 @@
 
 	// Submit subscriber data to MailChimp
 	// For parameters doc, refer to: http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/
+	// For wrapper's doc, visit: https://github.com/drewm/mailchimp-api
 	$result = $MailChimp->post("lists/$list_id/members", [
 							'email_address' => $_POST["email"],
 							'merge_fields'  => ['FNAME'=>$_POST["fname"], 'LNAME'=>$_POST["lname"]],
